@@ -6,12 +6,10 @@ import io
 
 app = Flask(__name__)
 
-# MongoDB connection details
 uri = "mongodb+srv://aashish:test123@qrdb.he13git.mongodb.net/?retryWrites=true&w=majority&appName=qrDB"
 
 client = MongoClient(uri, server_api=ServerApi('1'))
 
-# Database and collection
 db = client['AgricultureDB']
 collection = db['qr_DB']
 

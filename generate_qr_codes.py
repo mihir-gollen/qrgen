@@ -5,6 +5,7 @@ from bson.objectid import ObjectId
 import io
 import json
 import os
+
 uri = "mongodb+srv://aashish:test123@qrdb.he13git.mongodb.net/?retryWrites=true&w=majority&appName=qrDB"
 
 client = MongoClient(uri, server_api=ServerApi('1'))

@@ -9,7 +9,6 @@ app = Flask(__name__)
 # MongoDB connection details
 uri = "mongodb+srv://aashish:test123@qrdb.he13git.mongodb.net/?retryWrites=true&w=majority&appName=qrDB"
 
-# Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
 
 # Database and collection
@@ -31,7 +30,6 @@ def get_record(record_id):
     
     if record:
         record['_id'] = str(record['_id'])
-        # Exclude the 'qr_code_path' field when sending the response
         if 'qr_code_path' in record:
             del record['qr_code_path']
         return jsonify(record)

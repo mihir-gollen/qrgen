@@ -24,7 +24,6 @@ collection = db['qr_DB']
 os.makedirs('qr_codes', exist_ok=True)
 
 def serialize_record(record):
-    """Convert MongoDB record to JSON serializable format."""
     serialized_record = {}
     for key, value in record.items():
         if isinstance(value, ObjectId):
